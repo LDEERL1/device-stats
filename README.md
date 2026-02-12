@@ -8,6 +8,11 @@
 
 База данных PostgreSQL запускается в Docker.
 
+## Demo
+
+Frontend: https://device-stats-wffb.onrender.com  
+API: https://device-stats-api.onrender.com/swagger
+
 ## Функциональность
 
 - Приём статистики активности устройства через REST API
