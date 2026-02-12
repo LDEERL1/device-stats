@@ -1,10 +1,7 @@
-﻿namespace DeviceStatsT.Dtos
+﻿public class DeviceStatDto
 {
-    public class DeviceStatDto
-    {
-        public Guid Id { get; set; }
-        public DateTimeOffset StartTime { get; set; }
-        public DateTimeOffset EndTime { get; set; }
-    }
-
+    public Guid StatId { get; set; }
+    public Guid DeviceId { get; set; }
+    public DateTimeOffset StartTime { get; set; }
+    public DateTimeOffset EndTime { get; set; }
 }

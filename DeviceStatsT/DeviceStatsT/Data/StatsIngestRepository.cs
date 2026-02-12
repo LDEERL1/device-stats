@@ -27,7 +27,11 @@ namespace DeviceStatsT.Data
         private const string ReadDevicesSql = @"
             select id, name, version from public.devices";
         private const string ReadStatsByDeviceIdSql = @"
-            select id, start_time as StartTime, end_time as EndTime
+            select 
+                id as StatId,
+                device_id as DeviceId,
+                start_time as StartTime,
+                end_time as EndTime
             from public.device_stats
             where device_id=@DeviceId
             order by start_time desc
