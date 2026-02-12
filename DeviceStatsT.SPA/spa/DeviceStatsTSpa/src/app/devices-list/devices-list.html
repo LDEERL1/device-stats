@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let device of (devices$ | async) ?? []">
+    <a [routerLink]="['/devices', device.id]">
+      {{ device.name }} - {{ device.version }}
+    </a>
+  </li>
+</ul>

@@ -1,0 +1,14 @@
+  
+<h2>Статистика устройства</h2>
+
+<p>ID: {{ deviceId$ | async }}</p>
+
+<ul>
+  <li *ngFor="let s of (stats$ | async) ?? []">
+    Start Time: {{ s.startTime | date:'dd.MM.yyyy HH:mm:ss' }} - End Time: {{ s.endTime | date:'dd.MM.yyyy HH:mm:ss' }}
+  </li>
+</ul>
+
+<p *ngIf="((stats$ | async) ?? []).length === 0">
+  Записей нет
+</p>
