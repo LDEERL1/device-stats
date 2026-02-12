@@ -9,7 +9,7 @@ builder.Services.AddCors(options =>
                       policy =>
                       {
                           policy
-                            .WithOrigins("http://localhost:4200")
+                            .WithOrigins("https://device-stats-wffb.onrender.com")
                             .AllowAnyHeader()
                             .AllowAnyMethod();
 
@@ -28,11 +28,12 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-
-    app.UseSwagger();
-    app.UseSwaggerUI();
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.MapGet("/", () => Results.Redirect("/swagger"));
+
+app.UseRouting();
 
 app.UseCors(MyAllowSpecificOrigins);
 
